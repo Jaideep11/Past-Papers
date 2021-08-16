@@ -1,0 +1,183 @@
+
+HPC (High Performance Computing)
+
+High-performance computing (HPC) is the ability to process data and perform complex calculations at high speeds. One of the best-known types of HPC solutions is the supercomputer. A supercomputer contains thousands of compute nodes that work together to complete one or more tasks. This is called parallel processing.
+The speed of HPC systems has increased from Gflops in the early 1990s to now Pflops in 2010.
+
+
+HTC (High Throughput Computing)
+
+This HTC paradigm pays more attention to high-flux computing. The main application for high-flux computing is in Internet searches and web services by millions or more users simultaneously. The performance goal thus shifts to measure high throughput or the number of tasks completed per unit of time. HTC technology needs to not only improve in terms of batch processing speed, but also address the acute problems of cost, energy savings, security, and reliability at many data and enterprise computing centers.
+
+--> Both HPC and HTC systems emphasize parallelism and distributed computing.
+
+
+Computing Paradigm Distinctions:
+
+In general, distributed computing is the opposite of centralized computing. The field of parallel computing overlaps with distributed computing to a great extent, and cloud computing overlaps with distributed, centralized, and parallel computing.
+
+1) Centralized Computing
+
+This is a computing paradigm by which all computer resources are centralized in one physical system. All resources (processors, memory, and storage) are fully shared and tightly coupled within one integrated OS.
+
+2) Parallel Computing
+
+In parallel computing, all processors are either tightly coupled with centralized shared memory or loosely coupled with distributed memory. Interprocessor communication is accomplished through shared memory or via message passing.
+A computer system capable of parallel computing is commonly known as a parallel computer.
+
+3) Distributed Computing
+
+A distributed system consists of multiple autonomous computers, each having its own private memory, communicating through a computer network. Information exchange in a distributed system is accomplished through message passing.
+
+4) Cloud Computing
+
+An Internet cloud of resources can be either a centralized or a distributed computing system. The cloud applies parallel or distributed computing, or both. Some authors consider cloud computing to be a form of utility computing or service computing.
+
+
+Concurrent Programming
+
+These terms typically refer to the union of parallel computing and distributing computing, although biased practitioners may interpret them differently. Ubiquitous computing refers to computing with pervasive devices at any place and time using wired or wireless communication. The Internet of Things (IoT) is a networked connection of everyday objects including computers, sensors, humans, etc.
+
+
+Efficiency:
+
+Measures the utilization rate of resources in an execution model by exploiting massive parallelism in HPC. For HTC, efficiency is more closely related to job throughput, data access, storage, and power efficiency.
+
+Dependability:
+
+Measures the reliability and self-management from the chip to the system and application levels. The purpose is to provide high-throughput service with Quality of Service (QoS) assurance, even under failure conditions.
+
+Adaptation in the programming model:
+
+Measures the ability to support billions of job requests over massive data sets and virtualized cloud resources under various workload and service models.
+
+Flexibility in the programming model:
+
+Measures the ability of distributed systems to run well in both HPC (science and engineering) and HTC (business) applications.
+
+
+Degree of Parallelism
+
+The degree of parallelism (DOP) is a metric which indicates how many operations can be or are being simultaneously executed by a computer. Bit-level parallelism (BLP) converts bit-serial processing to word-level processing gradually. instruction-level parallelism (ILP), in which the processor executes multiple instructions simultaneously rather than only one instruction at a time.  ILP requires branch prediction, dynamic scheduling, speculation, and compiler support to work efficiently.Data-level parallelism (DLP) was made popular through SIMD (single instruction, multiple data) and vector machines using vector or array types of instructions. DLP requires even more hardware support and compiler assistance to work properly. Ever since the introduction of multicore processors and chip multiprocessors (CMPs), we have been exploring task-level parallelism (TLP). TLP is far from being very successful due to difficulty in programming and compilation of code for efficient execution on multicore CMPs.
+
+
+Utility Computing
+
+Utility computing focuses on a business model in which customers receive computing resources from a paid service provider.  All grid/cloud platforms are regarded as utility service providers.
+
+
+Cyber Physical Systems
+
+A cyber-physical system (CPS) is the result of interaction between computational processes and the physical world. A CPS integrates “cyber” (heterogeneous, asynchronous) with “physical” (concurrent and information-dense) objects.
+
+
+Advances in CPU Processors
+
+Multicore architecture with dual, quad, six, or more processing cores. These processors exploit parallelism at ILP and TLP levels. Higher the processing power higher the heat generation with high frequency or high voltages.
+
+
+Multicore CPU and Many Core GPU Architecture
+
+Multicore CPUs may increase from the tens of cores to hundreds or more in the future. x-86 processors have been extended to serve HPC and HTC systems in some high-end server
+processors. The GPU also has been applied in large clusters to build supercomputers in MPPs.
+
+
+Multithreading Technology
+
+Four-issue superscalar processor, a fine-grain multithreaded processor, a coarse-grain multithreaded processor, a two-core CMP, and a simultaneous multithreaded (SMT) processor.
+Only instructions from the same thread are executed in a superscalar processor. Fine-grain multithreading switches the execution of instructions from different threads per cycle. Course-grain multithreading executes many instructions from the same thread for quite a few cycles before switching to another thread. The multicore CMP executes instructions from different threads completely. The SMT allows simultaneous scheduling of instructions from different threads in the same cycle.
+
+
+GPU Computing to Exascale and Beyond
+
+A GPU is a graphics coprocessor or accelerator mounted on a computer’s graphics card or video card. A GPU offloads the CPU from tedious graphics tasks in video editing applications.
+
+
+GPU Working
+
+Each core on a GPU can handle eight threads of instructions. This translates to having up to 1,024 threads executed concurrently on a single GPU. They are used in HPC systems to power supercomputers with massive parallelism at multicore and multithreading levels.
+
+
+Challenges identified for exascale computing:
+
+1) Power Efficiency of the GPU
+
+Bill Dally has estimated that CPU chip consumes 10 times more power per instruction as compared to GPU.
+CPU: 2nj/instructions: optimized for latency in caches and memory.
+GPU: 200pj/instructions: optimized for HTC.
+
+
+2) Memory Storage and Wide Area Network
+
+Memory access time did not improve much in the past. In fact, the memory wall problem is getting worse as the processor gets faster. 
+
+--> further notes on whatsapp
+
+
+Virtual Machines and Virtualization Middleware
+
+Virtual machines (VMs) offer novel solutions to underutilized resources, application inflexibility, software manageability, and security concerns in existing physical machines.
+
+
+VM Primitive Operations
+
+First, the VMs can be multiplexed between hardware machines.
+Second, a VM can be suspended and stored in stable storage.
+Third, a suspended VM can be resumed or provisioned to a new hardware platform.
+Finally, a VM can be migrated from one hardware platform to another.
+
+
+Convergence of Technology
+
+Convergence of technology depend upon:
+(1) hardware virtualization and multi-core chips, (2) utility and grid computing, (3)SOA, Web 2.0, and WS mashups, and (4) atonomic computing and data center automation. 
+Hardware virtualization and multicore chips enable the existence of dynamic configurations in the cloud. Utility and grid computing technologies lay the necessary foundation for computing clouds. Recent advances in SOA, Web 2.0, and mashups of platforms are pushing the cloud another step forward. Finally, achievements in autonomic computing and automated data center operations contribute to the rise of cloud computing.
+
+
+Cluster Architecture
+
+The cluster is connected to the Internet via a virtual private network (VPN) gateway. The gateway IP address locates the cluster. The system image of a computer is decided by the way the OS manages the shared cluster resources. Most clusters have loosely coupled node computers.
+
+
+Grid Computing Infrastructure
+
+Grid computing is envisioned to allow close interaction among applications running on distant computers simultaneously.
+
+1) Computational Grid
+
+
+Peer to Peer Network Families
+
+Client Server architecture.
+client machines (PCs and workstations) are connected to a central server for compute, email, file access, and database applications. e.g, Bit Torrent.
+Offers a distributed model of networked systems.
+Load balancing and failure managament are the important issues.
+Routing efficiency should be good.
+
+
+Overlay Networks
+
+There are two types of overlay networks:
+unstructured and structured. An unstructured overlay network is characterized by a random graph. There is no fixed route to send messages or files among the nodes. Structured overlay networks follow certain connectivity topology and rules for inserting and removing nodes (peer IDs) from the overlay graph.
+
+
+The Cloud Landscapes:
+
+1) Infrastructure as a service(IaaS)
+
+This model puts together infrastructures demanded by users—namely servers, storage, networks, and the data center fabric. The user can deploy and run on multiple VMs running guest OSes on specific applications. 
+
+2) Platform as a service(PaaS)
+
+This model enables the user to deploy user-built applications onto a virtualized cloud platform. PaaS includes middleware, databases, development tools, and some runtime support such as Web 2.0 and Java. The platform includes both hardware and
+software integrated with specific programming interfaces.
+
+3) Software as a service(SaaS)
+
+) This refers to browser-initiated application software over thousands of paid cloud customers. The SaaS model applies to business processes, industry applications, consumer relationship management (CRM), enterprise resources planning (ERP), human resources (HR), and collaborative applications.
+
+
+
+
+
+
