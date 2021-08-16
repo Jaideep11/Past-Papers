@@ -1,0 +1,44 @@
+def findLIS(A):
+ 
+   
+    LIS = [[] for _ in range(len(A))]
+ 
+    LIS[0].append(A[0])
+ 
+    # start from second element in the list
+    for i in range(1, len(A)):
+ 
+        # do for each element in sublist[0..i-1]
+        for j in range(i):
+ 
+            # find longest increasing subsequence that ends with A[j]
+            # where A[j] is less than the current element A[i]
+ 
+            if A[j] < A[i] and len(LIS[j]) > len(LIS[i]):
+                LIS[i] = LIS[j].copy()
+ 
+        # include A[i] in LIS[i]
+        LIS[i].append(A[i])
+ 
+    # j will contain index of LIS
+    j = 0
+    for i in range(len(A)):
+        if len(LIS[j]) < len(LIS[i]):
+            j = i
+ 
+    # print LIS
+    print(LIS[j])
+ 
+ 
+if __name__ == '__main__':
+ 
+lst = [] 
+  
+n = int(input("Enter number of elements : ")) 
+  
+# iterating till the range 
+for i in range(0, n): 
+    A = int(input()) 
+  
+    lst.append(A)
+    findLIS(A)

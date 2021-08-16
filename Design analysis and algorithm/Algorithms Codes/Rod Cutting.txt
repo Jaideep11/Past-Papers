@@ -1,0 +1,32 @@
+def cut_rod(p, n):
+
+    r = [-1]*(n + 1)
+    r[0] = 0
+ 
+    s = [-1]*(n + 1)
+ 
+    for i in range(1, n + 1):
+        q = -1
+        for j in range(1, i + 1):
+            temp = p[j] + r[i - j]
+            if q < temp:
+                q = temp
+                s[i] = j
+        r[i] = q
+ 
+    return r, s
+ 
+ if _name_ == '_main_':
+n = int(input('Enter the length of the rod in inches: '))
+ 
+p = [None]
+for i in range(1, n + 1):
+    price = input('Enter the price of a rod of length {} in: '.format(i))
+    p.append(int(price))
+ 
+r, s = cut_rod(p, n)
+print('The maximum revenue that can be obtained:', r[n])
+print('The rod needs to be cut into length(s) of ', end='')
+while n > 0:
+    print(s[n], end=' ')
+    n -= s[n]

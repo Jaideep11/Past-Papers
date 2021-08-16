@@ -1,0 +1,34 @@
+def count(S, N):
+ 
+    if N == 0:
+        return 1
+ 
+    if N < 0:
+        return 0
+ 
+    res = 0
+ 
+    for i in range(len(S)):
+        # recur to see if total can be reached by including
+        # current coin S[i]
+        res += count(S, N - S[i])
+ 
+    return res
+ 
+ 
+if __name__ == '__main__':
+ 
+    
+lst = [] 
+  
+n = int(input("Enter number of elements : ")) 
+  
+for i in range(0, n): 
+    S = int(input()) 
+  
+    lst.append(S)
+ 
+    N = input('enter total changes required: ')
+ 
+    print("Total number of ways to get desired change is", count(S, N))
+ 
